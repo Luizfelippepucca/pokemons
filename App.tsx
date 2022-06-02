@@ -1,18 +1,22 @@
-import {  useState} from 'react'
+import { useState} from 'react'
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, Animated} from 'react-native';
-import {Container,Logo} from './styles'
+import {Container,Logo} from './styles';
+import { ThemeProvider } from 'styled-components/native';
+import theme from './src/global/styles/theme';
+import Header from './src/components/header';
 
 export const App = () =>{
-  const [load,setLoad] = useState(new Animated.Value(200));
+  const [slideTopImg,setSlidTopImg] = useState(new Animated.Value(200));
   const [fadeIn,setFadeIn] = useState(new Animated.Value(0));
 
   Animated.timing(
-    load,
+    slideTopImg,
     {
     toValue: 550,
-    duration: 1000,
+    duration: 500,
     useNativeDriver: false,
+    delay:1000,
     }
   ).start();
 
@@ -22,15 +26,18 @@ export const App = () =>{
       toValue:1,
       duration:1000,
       useNativeDriver:false,
-      delay:1000,
+      delay:1800,
     }
   ).start();
 
 
   return (
+    <ThemeProvider theme={theme}>
+       <StatusBar style="auto" />
     <Container >
+      <Header/>
       <Animated.View style={[styles.box,{
-        transform:[{translateY:load }]
+        transform:[{translateY:slideTopImg }]
       }]}>
         <Logo source={require('./assets/logo.png')} />
       </Animated.View>
@@ -42,8 +49,9 @@ export const App = () =>{
        <Text>Todo meu app </Text>
        <Text>Todo meu app </Text>
       </Animated.View>
-      <StatusBar style="auto" />
+     
     </Container>
+    </ThemeProvider>
   );
 }
 
