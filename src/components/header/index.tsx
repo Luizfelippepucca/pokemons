@@ -1,5 +1,5 @@
 import { useState} from 'react'
-import { Text, StyleSheet, Animated} from 'react-native';
+import { Text,Animated} from 'react-native';
 import { Inter_400Regular, useFonts} from '@expo-google-fonts/inter';
 import Apploading from 'expo-app-loading';
 import {
@@ -9,12 +9,13 @@ import {
     CustomCircle,
     CircleImg ,
     ProfilePicture,
-    CustomSmallCircle
+    CustomSmallCircle,
+    styles
 } from './styles';
 
  const Header = ()=>{
-     const [slideTop,setSlideTop] = useState( new Animated.Value(0));
-     const [opacity,setOpacity] = useState( new Animated.Value(0));
+     const [slideTop] = useState( new Animated.Value(0));
+     const [opacity] = useState( new Animated.Value(0));
      const [fontsLoaded] = useFonts({
         Inter_400Regular
      });
@@ -63,21 +64,7 @@ import {
     )
 }
 
-const styles = StyleSheet.create({
-  
-     TitleText:{
-         fontFamily:'Inter_400Regular',
-         fontSize:20,
-         color:'#fff',
-     },
-     SubtitleText:{
-        fontFamily:'Inter_400Regular',
-        fontSize:14,
-        color:'#fff',
-     }
-   
-  
-  })
+
   
 
 export default Header;
