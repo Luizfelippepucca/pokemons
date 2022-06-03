@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 import styled from 'styled-components/native';
-import { StyleSheet} from 'react-native';
+
 
 
 
@@ -68,18 +68,17 @@ right:20% ;
 
 `
 
-export const styles = StyleSheet.create({
-  
-    TitleText:{
-        fontFamily:'Inter_400Regular',
-        fontSize:20,
-        color:'#fff',
-    },
-    SubtitleText:{
-       fontFamily:'Inter_400Regular',
-       fontSize:14,
-       color:'#fff',
-    }
-  
- 
- })
+export const Title = styled.Text`
+  font-size:20px;
+  ${({theme})=>css`
+   color:${theme.colors.header.color.primary} ;
+  `}
+`
+
+export const SubTitle = styled.Text`
+  font-Size:14px;
+  ${({theme})=>css`
+   color:${theme.colors.header.color.primary} ;
+  `}
+`
+

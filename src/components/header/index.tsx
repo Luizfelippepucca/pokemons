@@ -10,7 +10,8 @@ import {
     CircleImg ,
     ProfilePicture,
     CustomSmallCircle,
-    styles
+    Title,
+    SubTitle
 } from './styles';
 
  const Header = ()=>{
@@ -49,8 +50,8 @@ import {
         <Animated.View style={{height:slideTop,display:'flex',alignItems:'center',justifyContent:'center',opacity:opacity}}>
             <Container>
                 <ContLeftHeader >
-                    <Text style={styles.TitleText}>Olá, Ash Ketchum</Text>
-                    <Text style={styles.SubtitleText}>Bem Vindo!😀</Text>
+                    <Title style={{fontFamily:'Inter_400Regular'}}>Olá, Ash Ketchum</Title>
+                    <SubTitle style={{fontFamily:'Inter_400Regular'}}>Bem Vindo!😀</SubTitle>
                 </ContLeftHeader>
                 <ContRightHeader >
                 <CustomCircle>

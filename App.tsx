@@ -31,13 +31,16 @@ export const App = () =>{
           }]}>
             <Logo source={require('./assets/logo.png')} />
           </Animated.View>
-        <Body>
+        <Body 
+          title="Qual pokémon você
+          escolheria?"
+        >
           <>
-                <Text>Todo meu app </Text>
-                <Text>Todo meu app </Text>
-                <Text>Todo meu app </Text>
-                <Text>Todo meu app </Text>
-                <Text>Todo meu app </Text>
+             <Text>Todo meu app </Text>
+             <Text>Todo meu app </Text>
+             <Text>Todo meu app </Text>
+             <Text>Todo meu app </Text>
+             <Text>Todo meu app </Text>
             </>
           </Body>
         </Container>
