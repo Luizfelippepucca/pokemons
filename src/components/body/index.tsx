@@ -17,9 +17,9 @@ export const Body = ({children,title}:BodyProps)=>{
         fadeIn,
         {
           toValue:1,
-          duration:500,
+          duration:700,
           useNativeDriver:false,
-          delay:1200,
+          delay:1900,
         }
       ).start();
 

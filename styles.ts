@@ -12,8 +12,8 @@ export const Container = styled.SafeAreaView`
 `
 
 export const Logo = styled.Image`
-width:300px;
-height:105px ;
+width:142px;
+height:51px ;
 
 `
 
